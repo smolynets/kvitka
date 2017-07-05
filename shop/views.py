@@ -223,7 +223,10 @@ def flower_edit(request, pk):
             if not price:
                errors['price'] = u"Ціна є обов'язковою"
             else:
-               data.price = price 
+               if is_digit(price) == 1:
+                 data.price = price 
+               else:
+                 errors['price'] = u"Введіть ціле число!"
 
             description = request.POST.get('description', '').strip()
             if not description:
