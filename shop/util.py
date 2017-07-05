@@ -41,3 +41,15 @@ def flow_count_name(request):
   else:
      return 0
   return a
+
+
+
+def is_digit(string):
+    if string.isdigit():
+       return 1
+    else:
+        try:
+            float(string)
+            return None
+        except ValueError:
+            return None

@@ -18,6 +18,8 @@ from crispy_forms.layout import Submit, Button
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from time import time
+from .util import is_digit
+
 
 
 
@@ -156,7 +158,10 @@ def flower_add(request):
       if not price:
           errors['price'] = u"Ціна є обов'язковою"
       else:
-          data['price'] = price
+          if is_digit(price) == 1:
+            data['price'] = price
+          else:
+            errors['price'] = u"Введіть ціле число!"
       description = request.POST.get('description', '').strip()
       if not description:
         errors['description'] = u"Опис є обов'язковим"
