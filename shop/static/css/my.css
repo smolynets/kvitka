@@ -4,10 +4,9 @@
 }
 
 .lot {
-	margin-left: 90px;
-	margin-top: 90px;
-	margin-bottom: 90px;
-	margin-right: 90px;
+	height: 450px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 
 }
 
@@ -303,6 +302,15 @@ footer {
 }
 
 .main_list{
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 10%;
 }
+
+.lot_image{
+	height: 200px;
+    width: 200px;
+}
+
+.after_image{
+	margin-top: 15%;
+}
+

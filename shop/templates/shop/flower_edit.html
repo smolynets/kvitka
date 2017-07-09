@@ -24,7 +24,7 @@ enctype="multipart/form-data" role="form" class="form-horizontal form-add_edit">
 <div class="form-group {% if errors.title %}has-error{% endif%}">
   <label for="title" class="col-sm-2 control-label">Назва*</label>
   <div class="col-sm-10">
-    <input type="text" value="{{ flower.price }}"
+    <input type="text" value="{{ flower.title }}"
     name="title" id="title" class="form-control" />
      <span class="help-block">{{ errors.title }}</span>
   </div>

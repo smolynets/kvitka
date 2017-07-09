@@ -27,17 +27,15 @@
     <div class='row main_list'>
 
       {% for fl in flowers %}
-      <div class='col-xs-4'>
-        <div class="lot">
+      <div class='col-xs-4 lot'>
           <div class="title_lot"><h4>{{ fl.title }}</h4></div>
-          <img class='img-thumbnail'
-            src='{{ fl.photo_main.url }}' height='200'
-            width='200' />
+          <div class="lot_image"><img class='img-thumbnail'
+            src='{{ fl.photo_main.url }}'/></div>
+            <div class="after_image">
           <div id='price_buy'>{{ fl.price }} грн
             <button class='to_basket' value='{{ fl.lat_title }}'>Купити</button></div>
             <div id='reade_more'><a href="{% url "one_flower" fl.id %}">Читати більше...</a></div>
-            
-        </div>
+            </div>
       </div>
       {% endfor %}
 

@@ -151,8 +151,7 @@ def flower_add(request):
       else:
         data['title'] = title
 
-      t = time()
-      data['lat_title'] = t
+      data['lat_title'] = time()
         
         
       price = request.POST.get('price', '').strip()
@@ -218,7 +217,7 @@ def flower_edit(request, pk):
             else:
                 data.title = title
 
-            data.lat_title = datetime.today()
+            data.lat_title = time()
 
             price = request.POST.get('price', '').strip()
             if not price:
