@@ -22,13 +22,13 @@
     <button class='to_basket bb' value='{{ fl.lat_title }}'>Купити</button></div>
     <div>
       <div class="title_lot_one"><h1>{{ fl.title }}</h1></div>
-      <p class="text_about">{{ fl.description }}</p>
+      <p id="text_about">{{ fl.description }}</p>
           <center>
-      <img src='{{ fl.photo_main.url }}' width='650' height='550' class="big_photo img-thumbnail" id='big_photo'>
+      <img src='{{ fl.photo_main.url }}' width='350' height='250' class="big_photo img-thumbnail" id='big_photo'>
           </center>
           <center>
       {% if fl.photo_big %}
-        <img src='{{ fl.photo_big.url }}' width='650' height='550' class="big_photo img-thumbnail" id='big_photo'>
+        <img src='{{ fl.photo_big.url }}' width='350' height='250' class="big_photo img-thumbnail" id='big_photo'>
       {% endif %}
         </center>
       </div>
