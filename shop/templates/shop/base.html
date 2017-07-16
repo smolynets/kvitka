@@ -25,7 +25,7 @@
 
   	<!-- Logo -->
   	<div class="row">
-    <div class='col-xs-12'>
+    <div class='col-xs-6 col-xs-offset-3'>
       <h1 id='title'>{% block title %}{% endblock title %}</h1>
 
 
@@ -35,7 +35,7 @@
 
     <!-- Start SubHeader -->
     <div class='row' id='sub-header'>
-      <div class='col-xs-12'>
+      <div class='col-xs-6 col-xs-offset-3'>
        <ul class='nav nav-pills' role='tablist'>
         <li role='presentation' {% if request.path == '/' %}class="active"{% endif %}><a href='{% url 'main' %}'>Саджанці та насіння</a></li>
         <li role='presentation' {% if '/pro_mene' in request.path %}class="active"{% endif %}><a href='{% url 'about' %}'>Про мене</a></li>
@@ -49,7 +49,7 @@
     </div>
     <!-- End SubHeader -->
 
-     <div class="col-xs-12" id="content-column">
+     <div>
     
     {% block content %}{% endblock content %}
 

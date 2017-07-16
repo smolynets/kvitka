@@ -54,8 +54,9 @@ def contacts(request):
 
 ####################################################################
 def basket(request):
-   return render(request, 'shop/basket.html',
-     {'flowers':basket_list(request), 'price_list': suma(request)})
+   flowers = basket_list(request)
+   price_list = suma(request)
+   return render(request, 'shop/basket.html', locals())
 
 
 
